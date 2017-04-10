@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>hw5_565</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<script src = "../js/Search.js"></script>
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">URL Search</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li class="active"><a href="/html/index.html">Home</a></li>
+            <li><a href="../html/565_hw5.html">Question 2</a></li>
+        </ul>
+        <form class="navbar-form navbar-left">
+            <div class="form-group">
+
+            </div>
+
+        </form>
+    </div>
+</nav>
+<div>
+<form method="post" action="http://Query.php" target="_blank" onsubmit="try {return window.confirm(&quot;You are submitting information to an external page.\nAre you sure?&quot;);} catch (e) {return false;}">
+    <p>Select a field to display:
+        <select name="select">
+            <option selected>*</option>
+            <option>ID</option>
+        </select>
+    </p>
+    <p><input type="submit" value="View Table"></p>
+</form>
+</div>
+    <form method="post" action="http://Query.php" target="_blank" onsubmit="try {return window.confirm(&quot;You are submitting information to an external page.\nAre you sure?&quot;);} catch (e) {return false;}">
+        <h2> Input URL and Description</h2>
+        <div><label>URL:</label>
+            <input type = "text" name = "url"></div>
+    </form></div>
+    <div><label>Description:</label>
+    <input type="text" name="description"></div>
+
+<p><input type="submit" value="Send Query"></p>
+    <h2>Search for Website Description</h2>
+        <form  method="post" action="Query.php?go"  id="searchform">
+        <input  type="text" name="url">
+        <input  type="submit" name="submit" value="Search">
+        </form>
+</div>
+</body>
+</html>
