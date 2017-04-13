@@ -11,15 +11,18 @@ $description = isset($_POST["description"]) ? $_POST["description"] : "";
 
 $inputlist = array("url" => "URL", "description" => "Description");
 
-$query = "INSERT INTO urltable " .
-    "(URL,Description)" .
-    "VALUES ( '$url', '$description')";
 
-//connect to database
+//inserts correctly into database, does not update existing entries
+//$query = "INSERT INTO urltable " . "(URL,Description)" . "VALUES ( '$url', '$description')";
+
+
+$query = "INSERT INTO urltable " . "(URL,Description)" . "VALUES ( '$url', '$description')" . "ON DUPLICATE KEY UPDATE URL " . "VALUES  ('$url' , '$description')";
+
+//Connect to Database
 if( !( $database = @mysql_connect("CopDataSvr.ccec.unf.edu","n00934565","34565Spr2017#")))
     die("Could not connect to database </body></html>" );
 
-//open Products database
+//Open Database
 if ( !mysql_select_db("n00934565", $database ))
     die("Could not open urltable database </body></html>" );
 

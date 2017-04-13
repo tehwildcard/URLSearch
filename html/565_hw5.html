@@ -26,7 +26,7 @@
     </nav>
 
     <h2> Display Database</h2>
-    <form method="post" action="../php/Query.php">
+    <form method = "post" action = "../php/Query.php">
         <p>Select a field to display:
             <select name="select">
                 <option selected>*</option>
@@ -36,6 +36,14 @@
         <p><input type="submit" value="Send Query"></p>
     </form>
 
+    <br>
+    <h2> Search Database for URL or Description</h2>
+    <form method = "post" action="../php/Search.php?go" id = "searchform">
+        <input type = "text" name = "queryDatabase">
+        <input type = "submit" name = "submit" value ="Search">
+    </form>
+
+    <br>
     <h2> Input URL and Description</h2>
     <form method="post" action="../php/Update.php">
         <div><label>URL:</label>

@@ -26,7 +26,7 @@ mysql_close($database);
 ?>
 
 <table>
-    <caption>Results of SELECT <?php print( "$select" ) ?>FROM urltable</caption>
+    <caption>Results of SELECT <?php print( "$select" ) ?>FROM urltable </caption>
 
     <?php
     while( $row = mysql_fetch_row( $result ) )
